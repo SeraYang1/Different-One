@@ -52,7 +52,7 @@ class Survival: UIViewController {
 
         
         //Starts timer
-        Time.text = "10"
+        Time.text = "5"
         timer = Timer.scheduledTimer(timeInterval: 1, target:self, selector: #selector(Survival.update), userInfo: nil, repeats: true)
         
         //Sets up squares
@@ -76,6 +76,7 @@ class Survival: UIViewController {
                 print("\(yPos)")
                 if(yPos > wrongYPos && yPos < (wrongYPos+Int(size)-2) && xPos > wrongXPos && xPos < (wrongXPos+Int(size)-2)){
                     Score.text = String(describing: Int(Score.text!)!+1)
+                    timeDecrement = 0
                     if(numSquares == 5){
                         numSquares = 3
                         range = range * 0.75
@@ -101,6 +102,17 @@ class Survival: UIViewController {
         let b = drand48()*Double(1-range)
         let g = drand48()*Double(1-range)
         let color = UIColor(red: CGFloat(r), green: CGFloat(g), blue: CGFloat(b), alpha: 1.0).cgColor
+        
+        
+        //edit every time
+        width = Double(self.view.bounds.width)-2.0*Double(numSquares)
+        size = width/Double(numSquares)
+        wrongX = Int(arc4random_uniform(UInt32(numSquares-1)))+1
+        wrongY = Int(arc4random_uniform(UInt32(numSquares-1)))+1
+        wrongXPos = Int(Double(numSquares)+Double(wrongX)*size)
+        wrongYPos = Int(3.0+Double(numSquares)+Double(yHigh)+Double(wrongY)*size)
+        
+
         
         //Draws all squares same color
         for x in 0...(numSquares-1){
@@ -138,12 +150,12 @@ class Survival: UIViewController {
     
     //updates time
     func update() {
-        timeDecrement+=1
-        if timeDecrement == 10 {
+        if timeDecrement == 5 {
             //show game over screen
             gameOverLoad()
         }
-        Time.text = String(10-timeDecrement)
+        Time.text = String(5-timeDecrement)
+        timeDecrement+=1
     }
     
     func gameOverLoad(){
