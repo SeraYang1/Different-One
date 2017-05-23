@@ -13,6 +13,8 @@
 		D64486721ED20147003D2034 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D64486701ED20147003D2034 /* LaunchScreen.storyboard */; };
 		D644867A1ED2B255003D2034 /* Survival.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64486791ED2B255003D2034 /* Survival.swift */; };
 		D644867C1ED2B296003D2034 /* Timed.swift in Sources */ = {isa = PBXBuildFile; fileRef = D644867B1ED2B296003D2034 /* Timed.swift */; };
+		D644867E1ED49B50003D2034 /* GameOver.swift in Sources */ = {isa = PBXBuildFile; fileRef = D644867D1ED49B50003D2034 /* GameOver.swift */; };
+		D64486801ED49BF6003D2034 /* Pause.swift in Sources */ = {isa = PBXBuildFile; fileRef = D644867F1ED49BF6003D2034 /* Pause.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		D64486731ED20147003D2034 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D64486791ED2B255003D2034 /* Survival.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Survival.swift; sourceTree = "<group>"; };
 		D644867B1ED2B296003D2034 /* Timed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timed.swift; sourceTree = "<group>"; };
+		D644867D1ED49B50003D2034 /* GameOver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameOver.swift; sourceTree = "<group>"; };
+		D644867F1ED49BF6003D2034 /* Pause.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pause.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 				D64486731ED20147003D2034 /* Info.plist */,
 				D64486791ED2B255003D2034 /* Survival.swift */,
 				D644867B1ED2B296003D2034 /* Timed.swift */,
+				D644867D1ED49B50003D2034 /* GameOver.swift */,
+				D644867F1ED49BF6003D2034 /* Pause.swift */,
 			);
 			path = "Different Colors";
 			sourceTree = "<group>";
@@ -143,6 +149,8 @@
 				D64486641ED20147003D2034 /* AppDelegate.swift in Sources */,
 				D644867C1ED2B296003D2034 /* Timed.swift in Sources */,
 				D644867A1ED2B255003D2034 /* Survival.swift in Sources */,
+				D64486801ED49BF6003D2034 /* Pause.swift in Sources */,
+				D644867E1ED49B50003D2034 /* GameOver.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
