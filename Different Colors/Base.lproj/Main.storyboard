@@ -123,7 +123,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cx9-el-s82">
-                                                <rect key="frame" x="32" y="285" width="71" height="64"/>
+                                                <rect key="frame" x="48" y="301" width="50" height="50"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" red="0.4068616108" green="0.23333489769999999" blue="0.5540676725" alpha="1" colorSpace="calibratedRGB"/>
                                                 <state key="normal" image="home"/>
@@ -132,10 +132,19 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6u8-qn-V8K">
-                                                <rect key="frame" x="136" y="285" width="71" height="64"/>
+                                                <rect key="frame" x="146" y="301" width="50" height="50"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" red="0.4068616108" green="0.23333489769999999" blue="0.5540676725" alpha="1" colorSpace="calibratedRGB"/>
                                                 <state key="normal" image="loading"/>
+                                                <connections>
+                                                    <action selector="restartButton:" destination="CC8-ii-i0k" eventType="touchUpInside" id="hyL-ju-RSI"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y2W-X8-9RO">
+                                                <rect key="frame" x="85" y="214" width="71" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" red="0.4068616108" green="0.23333489769999999" blue="0.5540676725" alpha="1" colorSpace="calibratedRGB"/>
+                                                <state key="normal" image="home"/>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -156,7 +165,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2fW-KF-bQE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1714" y="-352"/>
+            <point key="canvasLocation" x="-1714.4000000000001" y="-352.17391304347831"/>
         </scene>
         <!--Game Over-->
         <scene sceneID="Wg5-9y-Agp">
@@ -211,6 +220,9 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" red="0.4068616108" green="0.23333489769999999" blue="0.5540676725" alpha="1" colorSpace="calibratedRGB"/>
                                                 <state key="normal" image="loading"/>
+                                                <connections>
+                                                    <action selector="restartbutton:" destination="mPH-CH-QZp" eventType="touchUpInside" id="hUi-3u-8hW"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -232,7 +244,7 @@
         <!--Survival-->
         <scene sceneID="2bk-AP-U8E">
             <objects>
-                <viewController storyboardIdentifier="SurvivalViewController" id="lq1-Me-aQA" customClass="Survival" customModule="Different_Colors" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Survival" id="lq1-Me-aQA" customClass="Survival" customModule="Different_Colors" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="0Jo-wR-1KH"/>
                         <viewControllerLayoutGuide type="bottom" id="5PZ-Ph-Ga5"/>
@@ -367,6 +379,6 @@
         <image name="thin-black-line" width="343" height="4"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Jsu-TL-kqI"/>
+        <segue reference="fQi-Oa-IBp"/>
     </inferredMetricsTieBreakers>
 </document>

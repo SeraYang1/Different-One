@@ -10,14 +10,13 @@ import Foundation
 import UIKit
 
 class Pause: UIViewController {
+    
+    @IBAction func restartButton(_ sender: Any) {
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //Game Over setup
-//        gameOverSmallScreen.layer.cornerRadius = 10
-//        gameOverBlueBorder.layer.cornerRadius = 10
-//        restartButton.layer.cornerRadius = 10
-//        homeButton.layer.cornerRadius = 10
     }
     
     override func didReceiveMemoryWarning() {

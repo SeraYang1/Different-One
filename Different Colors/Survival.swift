@@ -97,6 +97,9 @@ class Survival: UIViewController {
     
     //calls drawRect multiple times to draw the squares
     func generateSquares(numSquares: Int, range: Double){
+        //clears background 
+        drawRect(x: 0.0, y: 3.0+Double(yHigh), width: width+Double(numSquares)*2.0, height: Double(yDiff)-3.0, color: UIColor.white.cgColor)
+        
         //size of board minus border width
         let r = drand48()*Double(1-range)
         let b = drand48()*Double(1-range)

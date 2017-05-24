@@ -10,11 +10,16 @@ import Foundation
 import UIKit
 
 class GameOver: UIViewController {
-    
     //variables
     @IBOutlet weak var score: UILabel!
     var points = ""
-    
+
+    @IBAction func restartbutton(_ sender: Any) {
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let newViewController = storyBoard.instantiateViewController(withIdentifier: "Survival") as! Survival
+        self.present(newViewController, animated: true, completion: nil)
+    }
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         
