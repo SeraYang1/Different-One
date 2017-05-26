@@ -14,7 +14,6 @@ class Survival: UIViewController {
     @IBOutlet weak var blackLineBot: UIImageView!
     @IBOutlet weak var blackLineTop: UIImageView!
     @IBOutlet weak var restartButton: UIButton!
-    @IBOutlet weak var homeButton: UIButton!
     @IBOutlet weak var Time: UILabel!
     @IBOutlet weak var Score: UILabel!
     var timer = Timer()

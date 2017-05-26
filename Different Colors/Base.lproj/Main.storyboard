@@ -328,11 +328,13 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="pause"/>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="thin-black-line" translatesAutoresizingMaskIntoConstraints="NO" id="hWj-1o-aMb" userLabel="thin-black-line-low">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="thin-black-line" translatesAutoresizingMaskIntoConstraints="NO" id="hWj-1o-aMb" userLabel="thin-black-line-low">
                                 <rect key="frame" x="0.0" y="598" width="375" height="3"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="375" id="5ke-q9-KCq"/>
+                                </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4j8-ZI-vXx" userLabel="Timer">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="60" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4j8-ZI-vXx" userLabel="Timer">
                                 <rect key="frame" x="147.5" y="99" width="77" height="76"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="60"/>
@@ -342,6 +344,12 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="blackLineBot" destination="hWj-1o-aMb" id="CkQ-BX-NBm"/>
+                        <outlet property="blackLineTop" destination="Wxm-92-qwJ" id="mOf-yu-6NF"/>
+                        <outlet property="score" destination="31x-Bt-h4t" id="oGF-bs-Wqn"/>
+                        <outlet property="time" destination="4j8-ZI-vXx" id="ALq-jS-a0d"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d6z-h6-YHQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
