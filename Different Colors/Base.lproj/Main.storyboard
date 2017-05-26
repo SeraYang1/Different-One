@@ -320,7 +320,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="thin-black-line" translatesAutoresizingMaskIntoConstraints="NO" id="Wxm-92-qwJ" userLabel="thin-black-line-high">
-                                <rect key="frame" x="0.0" y="234" width="375" height="3"/>
+                                <rect key="frame" x="0.0" y="228" width="375" height="3"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GBD-fU-2wl">
@@ -328,13 +328,12 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="pause"/>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="thin-black-line" translatesAutoresizingMaskIntoConstraints="NO" id="hWj-1o-aMb" userLabel="thin-black-line-low">
-                                <rect key="frame" x="0.0" y="598" width="375" height="3"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="375" id="5ke-q9-KCq"/>
-                                </constraints>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="thin-black-line" translatesAutoresizingMaskIntoConstraints="NO" id="hWj-1o-aMb" userLabel="thin-black-line-low">
+                                <rect key="frame" x="0.0" y="605" width="375" height="3"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.23020222202971707" blue="0.34404663169334559" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="60" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4j8-ZI-vXx" userLabel="Timer">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="20" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4j8-ZI-vXx" userLabel="Timer">
                                 <rect key="frame" x="147.5" y="99" width="77" height="76"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="60"/>

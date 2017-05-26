@@ -153,7 +153,6 @@ class Timed: UIViewController {
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let newViewController = storyBoard.instantiateViewController(withIdentifier: "GameOver") as! GameOver
         newViewController.points = score.text!
-        newViewController.survivalOrTimed = true
         self.present(newViewController, animated: true, completion: nil)
     }
 }
