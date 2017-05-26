@@ -11,13 +11,25 @@ import UIKit
 
 class GameOver: UIViewController {
     //variables
+    @IBOutlet weak var homeImage: UIButton!
+    @IBOutlet weak var restartImage: UIButton!
     @IBOutlet weak var score: UILabel!
     var points = ""
+    var survivalOrTimed = false
 
     @IBAction func restartbutton(_ sender: Any) {
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let newViewController = storyBoard.instantiateViewController(withIdentifier: "Survival") as! Survival
-        self.present(newViewController, animated: true, completion: nil)
+        
+        
+        let survival = storyBoard.instantiateViewController(withIdentifier: "Survival") as! Survival
+        
+        let timed = storyBoard.instantiateViewController(withIdentifier: "Timed") as! Timed
+        
+        if (survivalOrTimed == false){
+            self.present(timed, animated: true, completion:nil)
+        }else{
+            self.present(survival, animated: true, completion: nil)
+        }
     }
         
     override func viewDidLoad() {
@@ -25,11 +37,8 @@ class GameOver: UIViewController {
         
         //Sets game over score
         score.text = points
-        //Game Over setup
-//        gameOverSmallScreen.layer.cornerRadius = 10
-//        gameOverBlueBorder.layer.cornerRadius = 10
-//        restartButton.layer.cornerRadius = 10
-//        homeButton.layer.cornerRadius = 10
+        homeImage.layer.cornerRadius = 10
+        restartImage.layer.cornerRadius = 10
     }
     
     override func didReceiveMemoryWarning() {

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1421" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="703-4V-yAM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="703-4V-yAM">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -234,12 +234,14 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="homeImage" destination="zlZ-U1-Nrw" id="5YR-at-VPf"/>
+                        <outlet property="restartImage" destination="ptJ-wy-gqG" id="rjY-Z0-1BO"/>
                         <outlet property="score" destination="DhI-Oa-h69" id="gXd-Y6-7f3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="moz-p4-fPr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1777" y="376"/>
+            <point key="canvasLocation" x="-1714" y="319"/>
         </scene>
         <!--Survival-->
         <scene sceneID="2bk-AP-U8E">
@@ -301,7 +303,7 @@
         <!--Timed-->
         <scene sceneID="TlP-QU-2yi">
             <objects>
-                <viewController storyboardIdentifier="TimedViewController" id="abn-37-8WU" customClass="Timed" customModule="Different_Colors" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Timed" id="abn-37-8WU" customClass="Timed" customModule="Different_Colors" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5Qs-zr-K1D"/>
                         <viewControllerLayoutGuide type="bottom" id="Vey-cb-41d"/>
@@ -379,6 +381,6 @@
         <image name="thin-black-line" width="343" height="4"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="fQi-Oa-IBp"/>
+        <segue reference="Jsu-TL-kqI"/>
     </inferredMetricsTieBreakers>
 </document>
