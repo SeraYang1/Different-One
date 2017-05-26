@@ -85,6 +85,7 @@ class Survival: UIViewController {
                         numSquares += 1
                         generateSquares(numSquares: numSquares, range: range)
                     }
+                    Time.text = "5"
                 }
                 else{
                     gameOverLoad()
@@ -153,12 +154,12 @@ class Survival: UIViewController {
     
     //updates time
     func update() {
+        timeDecrement+=1
         if timeDecrement == 5 {
             //show game over screen
             gameOverLoad()
         }
         Time.text = String(5-timeDecrement)
-        timeDecrement+=1
     }
     
     func gameOverLoad(){
