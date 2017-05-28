@@ -11,11 +11,17 @@ import UIKit
 class Survival: UIViewController {
     
     
+    @IBOutlet weak var pauseScore: UILabel!
+    @IBOutlet weak var pauseSmallScreen: UIView!
+    @IBOutlet weak var pauseLabel: UILabel!
+    @IBOutlet weak var pauseBlackBackground: UIView!
     @IBOutlet weak var blackLineBot: UIImageView!
     @IBOutlet weak var blackLineTop: UIImageView!
     @IBOutlet weak var restartButton: UIButton!
     @IBOutlet weak var Time: UILabel!
     @IBOutlet weak var Score: UILabel!
+    
+    let botLayer = CAShapeLayer()
     var timer = Timer()
     var timeDecrement = 0
     var yHigh = 0
@@ -40,6 +46,11 @@ class Survival: UIViewController {
         yHigh = Int(blackLineTop.frame.origin.y)
         yLow = Int(blackLineBot.frame.origin.y)
         yDiff = yLow - yHigh - 2
+        
+        //hide pause screen
+        pauseSmallScreen.isHidden = true
+        pauseLabel.isHidden = true
+        pauseBlackBackground.isHidden = true
         
         //edit every time
         width = Double(self.view.bounds.width)-2.0*Double(numSquares)
@@ -135,6 +146,7 @@ class Survival: UIViewController {
         
         //draws incorrect tile
         drawRect(x: Double(numSquares)+Double(wrongX)*size, y: 3.0+Double(numSquares)+Double(yHigh)+Double(wrongY)*size, width: size-2, height: size-2, color: wrongColor)
+        view.layer.addSublayer(botLayer)
     }
     
     
@@ -147,8 +159,39 @@ class Survival: UIViewController {
         layer.path = square.cgPath
         layer.fillColor = color
         layer.strokeColor = color
-        view.layer.addSublayer(layer)
+        botLayer.addSublayer(layer)
     }
+    
+    
+    //press pause
+    @IBAction func pauseButtonLoadScreen(_ sender: Any) {
+        pauseBlackBackground.isHidden = false
+        pauseLabel.isHidden = false
+        pauseSmallScreen.isHidden = false
+        pauseScore.text = Score.text!
+        botLayer.removeFromSuperlayer()
+        timer.invalidate()
+    }
+    
+    //restarts game
+    @IBAction func pauseRestart(_ sender: Any) {
+    }
+    
+    //continues playing game
+    @IBAction func pausePlay(_ sender: Any) {
+        pauseBlackBackground.isHidden = true
+        pauseLabel.isHidden = true
+        pauseSmallScreen.isHidden = true
+        view.layer.addSublayer(botLayer)
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(Survival.update), userInfo: nil, repeats: true)
+    }
+    
+    //quits and goes back to home screen
+    @IBAction func pauseHome(_ sender: Any) {
+    }
+    
+    
+    
     
     
     //updates time
