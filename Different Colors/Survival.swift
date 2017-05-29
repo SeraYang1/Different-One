@@ -180,6 +180,9 @@ class Survival: UIViewController {
     
     //restarts game
     @IBAction func pauseRestart(_ sender: Any) {
+        numSquares = 3
+        range = 0.2
+        Score.text = "0"
         viewDidLoad()
     }
     
