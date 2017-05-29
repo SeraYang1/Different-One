@@ -10,10 +10,18 @@ import UIKit
 
 class Timed: UIViewController {
     
+    @IBOutlet weak var pauseHomeButton: UIButton!
+    @IBOutlet weak var pauseRestartButton: UIButton!
+    @IBOutlet weak var pausePlayButton: UIButton!
+    @IBOutlet weak var pauseLabel: UILabel!
+    @IBOutlet weak var pauseSmallScreen: UIView!
+    @IBOutlet weak var pauseBlackScreen: UIView!
     @IBOutlet weak var blackLineBot: UIImageView!
     @IBOutlet weak var blackLineTop: UIImageView!
     @IBOutlet weak var score: UILabel!
     @IBOutlet weak var time: UILabel!
+    
+    let botLayer = CAShapeLayer()
     var timer = Timer()
     var timeDecrement = 0
     var yHigh = 0
@@ -38,6 +46,15 @@ class Timed: UIViewController {
         yHigh = Int(blackLineTop.frame.origin.y)
         yLow = Int(blackLineBot.frame.origin.y)
         yDiff = yLow - yHigh - 2
+        
+        //hides pause stuff
+        pauseHomeButton.layer.cornerRadius = 5
+        pausePlayButton.layer.cornerRadius = 10
+        pauseRestartButton.layer.cornerRadius = 5
+        pauseLabel.isHidden = true
+        pauseSmallScreen.isHidden = true
+        pauseBlackScreen.isHidden = true
+        
         
         //edit every time
         width = Double(self.view.bounds.width)-2.0*Double(numSquares)
@@ -125,6 +142,7 @@ class Timed: UIViewController {
         
         //draws incorrect tile
         drawRect(x: Double(numSquares)+Double(wrongX)*size, y: 3.0+Double(numSquares)+Double(yHigh)+Double(wrongY)*size, width: size-2, height: size-2, color: wrongColor)
+        view.layer.addSublayer(botLayer)
     }
     
     
@@ -137,8 +155,32 @@ class Timed: UIViewController {
         layer.path = square.cgPath
         layer.fillColor = color
         layer.strokeColor = color
-        view.layer.addSublayer(layer)
+        botLayer.addSublayer(layer)
     }
+    
+    //pauses the game
+    @IBAction func pausePressed(_ sender: Any) {
+        pauseLabel.isHidden = false
+        pauseSmallScreen.isHidden = false
+        pauseBlackScreen.isHidden = false
+        botLayer.removeFromSuperlayer()
+        timer.invalidate()
+    }
+    
+    //resumes playing
+    @IBAction func playPauseButton(_ sender: Any) {
+        view.layer.addSublayer(botLayer)
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(Survival.update), userInfo: nil, repeats: true)
+    }
+    
+    //restarts game
+    @IBAction func restartPaused(_ sender: Any) {
+        numSquares = 3
+        range = 0.2
+        score.text = "0"
+        viewDidLoad()
+    }
+    
     
     func update() {
         timeDecrement+=1

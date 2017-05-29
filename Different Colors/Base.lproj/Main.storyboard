@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="703-4V-yAM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="703-4V-yAM">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -317,6 +317,9 @@
                                 <rect key="frame" x="327" y="49" width="32" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="pause"/>
+                                <connections>
+                                    <action selector="pausePressed:" destination="abn-37-8WU" eventType="touchUpInside" id="VyF-hf-dWb"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="thin-black-line" translatesAutoresizingMaskIntoConstraints="NO" id="hWj-1o-aMb" userLabel="thin-black-line-low">
                                 <rect key="frame" x="0.0" y="605" width="375" height="3"/>
@@ -330,12 +333,79 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="PauseScreen" translatesAutoresizingMaskIntoConstraints="NO" id="Fwd-v1-eDC">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="PAUSE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ai6-te-GtJ">
+                                        <rect key="frame" x="3" y="32" width="369" height="100"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="50"/>
+                                        <color key="textColor" red="0.89084996729999999" green="0.063910600540000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="brM-Da-XY9">
+                                <rect key="frame" x="64" y="137" width="245.99999999999989" height="391.99999999999994"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tE9-yd-edd">
+                                        <rect key="frame" x="3" y="3" width="240" height="386"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nev-oo-cf1">
+                                                <rect key="frame" x="0.0" y="60" width="240" height="106"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="110"/>
+                                                <color key="textColor" red="0.3928059545" green="0.71361016519999998" blue="0.99835759400000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="Home" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yVA-PQ-C6y" userLabel="Home">
+                                                <rect key="frame" x="48" y="301" width="50" height="50"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" red="0.4068616108" green="0.23333489769999999" blue="0.5540676725" alpha="1" colorSpace="calibratedRGB"/>
+                                                <state key="normal" image="home"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rCo-Mb-PMt" userLabel="Restart">
+                                                <rect key="frame" x="146" y="301" width="50" height="50"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" red="0.4068616108" green="0.23333489769999999" blue="0.5540676725" alpha="1" colorSpace="calibratedRGB"/>
+                                                <state key="normal" image="loading"/>
+                                                <connections>
+                                                    <action selector="pauseRestart:" destination="lq1-Me-aQA" eventType="touchUpInside" id="viw-PE-pcd"/>
+                                                    <action selector="restartPaused:" destination="abn-37-8WU" eventType="touchUpInside" id="48Y-cp-b3c"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7B5-zy-3Fs" userLabel="Play">
+                                                <rect key="frame" x="85" y="214" width="71" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" red="0.4068616108" green="0.23333489769999999" blue="0.5540676725" alpha="1" colorSpace="calibratedRGB"/>
+                                                <state key="normal" image="play"/>
+                                                <connections>
+                                                    <action selector="pausePlay:" destination="lq1-Me-aQA" eventType="touchUpInside" id="RHO-v1-Kig"/>
+                                                    <action selector="playPauseButton:" destination="abn-37-8WU" eventType="touchUpInside" id="fLe-0a-fGi"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="0.3928059545" green="0.71361016519999998" blue="0.99835759400000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
                         <outlet property="blackLineBot" destination="hWj-1o-aMb" id="CkQ-BX-NBm"/>
                         <outlet property="blackLineTop" destination="Wxm-92-qwJ" id="mOf-yu-6NF"/>
+                        <outlet property="pauseBlackScreen" destination="Fwd-v1-eDC" id="7bm-IK-Xct"/>
+                        <outlet property="pauseHomeButton" destination="yVA-PQ-C6y" id="qrd-U6-dhT"/>
+                        <outlet property="pauseLabel" destination="Ai6-te-GtJ" id="Mg4-2Z-81w"/>
+                        <outlet property="pausePlayButton" destination="7B5-zy-3Fs" id="Q6j-4Q-8Q6"/>
+                        <outlet property="pauseRestartButton" destination="rCo-Mb-PMt" id="QS7-xP-mnq"/>
+                        <outlet property="pauseSmallScreen" destination="brM-Da-XY9" id="kuB-gy-YUt"/>
                         <outlet property="score" destination="31x-Bt-h4t" id="oGF-bs-Wqn"/>
                         <outlet property="time" destination="4j8-ZI-vXx" id="ALq-jS-a0d"/>
                     </connections>
