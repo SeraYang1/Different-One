@@ -189,7 +189,7 @@
                                 <rect key="frame" x="0.0" y="604" width="375" height="3"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HfH-kP-XQA">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HfH-kP-XQA" userLabel="Pause">
                                 <rect key="frame" x="327" y="49" width="32" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="pause"/>
@@ -228,17 +228,16 @@
                                                 <color key="textColor" red="0.3928059545" green="0.71361016519999998" blue="0.99835759400000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cx9-el-s82">
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="Home" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cx9-el-s82" userLabel="Home">
                                                 <rect key="frame" x="48" y="301" width="50" height="50"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" red="0.4068616108" green="0.23333489769999999" blue="0.5540676725" alpha="1" colorSpace="calibratedRGB"/>
                                                 <state key="normal" image="home"/>
                                                 <connections>
-                                                    <action selector="pauseHome:" destination="lq1-Me-aQA" eventType="touchUpInside" id="h26-Go-ciK"/>
                                                     <segue destination="703-4V-yAM" kind="show" id="fQi-Oa-IBp"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6u8-qn-V8K">
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6u8-qn-V8K" userLabel="Restart">
                                                 <rect key="frame" x="146" y="301" width="50" height="50"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" red="0.4068616108" green="0.23333489769999999" blue="0.5540676725" alpha="1" colorSpace="calibratedRGB"/>
@@ -247,7 +246,7 @@
                                                     <action selector="pauseRestart:" destination="lq1-Me-aQA" eventType="touchUpInside" id="B58-iZ-xdS"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y2W-X8-9RO">
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y2W-X8-9RO" userLabel="Play">
                                                 <rect key="frame" x="85" y="214" width="71" height="64"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" red="0.4068616108" green="0.23333489769999999" blue="0.5540676725" alpha="1" colorSpace="calibratedRGB"/>
@@ -278,10 +277,13 @@
                         <outlet property="Timer" destination="sUn-N9-Jeo" id="xHi-ap-jHe"/>
                         <outlet property="blackLineBot" destination="KyO-VJ-bzD" id="A5p-il-oVw"/>
                         <outlet property="blackLineTop" destination="jEC-bD-nrC" id="fch-CA-Vss"/>
+                        <outlet property="homeButton" destination="Cx9-el-s82" id="0mg-EV-gna"/>
                         <outlet property="pauseBlackBackground" destination="v75-R2-CQT" id="vjb-Nu-p0e"/>
                         <outlet property="pauseLabel" destination="90Z-sb-8fu" id="ICW-Br-XrE"/>
                         <outlet property="pauseScore" destination="obg-wo-1me" id="IYL-zj-zi5"/>
                         <outlet property="pauseSmallScreen" destination="9cz-un-V3v" id="D2c-IR-CJQ"/>
+                        <outlet property="playButton" destination="Y2W-X8-9RO" id="B0F-9q-M8g"/>
+                        <outlet property="restartButton" destination="6u8-qn-V8K" id="Hy0-RD-gRO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AAF-b4-gZv" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -11,13 +11,15 @@ import UIKit
 class Survival: UIViewController {
     
     
+    @IBOutlet weak var restartButton: UIButton!
+    @IBOutlet weak var playButton: UIButton!
+    @IBOutlet weak var homeButton: UIButton!
     @IBOutlet weak var pauseScore: UILabel!
     @IBOutlet weak var pauseSmallScreen: UIView!
     @IBOutlet weak var pauseLabel: UILabel!
     @IBOutlet weak var pauseBlackBackground: UIView!
     @IBOutlet weak var blackLineBot: UIImageView!
     @IBOutlet weak var blackLineTop: UIImageView!
-    @IBOutlet weak var restartButton: UIButton!
     @IBOutlet weak var Time: UILabel!
     @IBOutlet weak var Score: UILabel!
     
@@ -51,6 +53,9 @@ class Survival: UIViewController {
         pauseSmallScreen.isHidden = true
         pauseLabel.isHidden = true
         pauseBlackBackground.isHidden = true
+        playButton.layer.cornerRadius = 10
+        homeButton.layer.cornerRadius = 5
+        restartButton.layer.cornerRadius = 5
         
         //edit every time
         width = Double(self.view.bounds.width)-2.0*Double(numSquares)
@@ -175,6 +180,7 @@ class Survival: UIViewController {
     
     //restarts game
     @IBAction func pauseRestart(_ sender: Any) {
+        viewDidLoad()
     }
     
     //continues playing game
@@ -185,11 +191,6 @@ class Survival: UIViewController {
         view.layer.addSublayer(botLayer)
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(Survival.update), userInfo: nil, repeats: true)
     }
-    
-    //quits and goes back to home screen
-    @IBAction func pauseHome(_ sender: Any) {
-    }
-    
     
     
     
