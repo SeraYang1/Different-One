@@ -10,6 +10,7 @@ import UIKit
 
 class Timed: UIViewController {
     
+    @IBOutlet weak var pauseScore: UILabel!
     @IBOutlet weak var pauseHomeButton: UIButton!
     @IBOutlet weak var pauseRestartButton: UIButton!
     @IBOutlet weak var pausePlayButton: UIButton!
@@ -85,18 +86,19 @@ class Timed: UIViewController {
             let location = touch.location(in: self.view)
             let xPos = Int(location.x)
             let yPos = Int(location.y)
-            if(yPos > wrongYPos && yPos < (wrongYPos+Int(size)-2) && xPos > wrongXPos && xPos < (wrongXPos+Int(size)-2)){
-                score.text = String(describing: Int(score.text!)!+1)
+            if(yPos<yLow && yPos > yHigh){
+                if(yPos > wrongYPos && yPos < (wrongYPos+Int(size)-2) && xPos > wrongXPos && xPos < (wrongXPos+Int(size)-2)){
+                    score.text = String(describing: Int(score.text!)!+1)
+                }
+                if(numSquares == 5){
+                    numSquares = 3
+                    range = range * 0.9
+                    generateSquares(numSquares: numSquares,range: range)
+                }else{
+                    numSquares += 1
+                    generateSquares(numSquares: numSquares,range: range)
+                }
             }
-            if(numSquares == 5){
-                numSquares = 3
-                range = range * 0.9
-                generateSquares(numSquares: numSquares,range: range)
-            }else{
-                numSquares += 1
-                generateSquares(numSquares: numSquares,range: range)
-            }
-            
         }
         super.touchesBegan(touches, with: event)
     }
@@ -163,6 +165,7 @@ class Timed: UIViewController {
         pauseLabel.isHidden = false
         pauseSmallScreen.isHidden = false
         pauseBlackScreen.isHidden = false
+        pauseScore.text = score.text!
         botLayer.removeFromSuperlayer()
         timer.invalidate()
     }
@@ -171,6 +174,9 @@ class Timed: UIViewController {
     @IBAction func playPauseButton(_ sender: Any) {
         view.layer.addSublayer(botLayer)
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(Survival.update), userInfo: nil, repeats: true)
+        pauseLabel.isHidden = true
+        pauseSmallScreen.isHidden = true
+        pauseBlackScreen.isHidden = true
     }
     
     //restarts game
@@ -178,6 +184,7 @@ class Timed: UIViewController {
         numSquares = 3
         range = 0.2
         score.text = "0"
+        timeDecrement = 0
         viewDidLoad()
     }
     

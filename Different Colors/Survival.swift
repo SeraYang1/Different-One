@@ -87,8 +87,6 @@ class Survival: UIViewController {
             let xPos = Int(location.x)
             let yPos = Int(location.y)
             if(yPos>yHigh && yPos<yLow){
-                print("\(wrongYPos)  \(wrongYPos+Int(size)-2)   \(wrongXPos)  \(wrongXPos+Int(size)-2)")
-                print("\(yPos)")
                 if(yPos > wrongYPos && yPos < (wrongYPos+Int(size)-2) && xPos > wrongXPos && xPos < (wrongXPos+Int(size)-2)){
                     Score.text = String(describing: Int(Score.text!)!+1)
                     timeDecrement = 0
