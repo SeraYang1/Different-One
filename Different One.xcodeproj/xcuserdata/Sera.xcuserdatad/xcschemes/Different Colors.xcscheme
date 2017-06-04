@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D644865F1ED20147003D2034"
-               BuildableName = "Different Colors.app"
-               BlueprintName = "Different Colors"
-               ReferencedContainer = "container:Different Colors.xcodeproj">
+               BuildableName = "Different One.app"
+               BlueprintName = "Different One"
+               ReferencedContainer = "container:Different One.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D644865F1ED20147003D2034"
-            BuildableName = "Different Colors.app"
-            BlueprintName = "Different Colors"
-            ReferencedContainer = "container:Different Colors.xcodeproj">
+            BuildableName = "Different One.app"
+            BlueprintName = "Different One"
+            ReferencedContainer = "container:Different One.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -56,9 +56,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D644865F1ED20147003D2034"
-            BuildableName = "Different Colors.app"
-            BlueprintName = "Different Colors"
-            ReferencedContainer = "container:Different Colors.xcodeproj">
+            BuildableName = "Different One.app"
+            BlueprintName = "Different One"
+            ReferencedContainer = "container:Different One.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -75,9 +75,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D644865F1ED20147003D2034"
-            BuildableName = "Different Colors.app"
-            BlueprintName = "Different Colors"
-            ReferencedContainer = "container:Different Colors.xcodeproj">
+            BuildableName = "Different One.app"
+            BlueprintName = "Different One"
+            ReferencedContainer = "container:Different One.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

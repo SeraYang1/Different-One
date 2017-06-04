@@ -49,10 +49,13 @@
                                 <color key="textColor" red="1" green="0.0" blue="0.1022875992" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aUI-1G-t2p">
-                                <rect key="frame" x="93.783424869004648" y="485.00000000000006" width="184.99999999999989" height="45.000000000000171"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aUI-1G-t2p">
+                                <rect key="frame" x="95" y="485" width="185" height="45"/>
                                 <color key="backgroundColor" red="0.56931917860000003" green="0.56579991230000004" blue="0.87720876960000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="184.99999999999989" id="NEw-xH-obs"/>
+                                    <constraint firstAttribute="height" constant="45.000000000000171" id="sQF-4R-csK"/>
+                                </constraints>
                                 <state key="normal" title="Time Trial">
                                     <color key="titleColor" red="0.99088520209999997" green="0.9809681468" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -60,10 +63,13 @@
                                     <segue destination="abn-37-8WU" kind="show" id="stB-sE-Hfg"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jgs-Sr-43j">
-                                <rect key="frame" x="93.783424869004648" y="406" width="184.99999999999989" height="45.000000000000028"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jgs-Sr-43j">
+                                <rect key="frame" x="95" y="406" width="185" height="45"/>
                                 <color key="backgroundColor" red="0.56931917860000003" green="0.56579991230000004" blue="0.87720876960000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45.000000000000028" id="5dP-LF-uVi"/>
+                                    <constraint firstAttribute="width" constant="184.99999999999989" id="R0P-vA-OQL"/>
+                                </constraints>
                                 <state key="normal" title="Survival">
                                     <color key="titleColor" red="0.99088520209999997" green="0.9809681468" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -72,6 +78,12 @@
                                 </connections>
                             </button>
                         </subviews>
+                        <constraints>
+                            <constraint firstItem="aUI-1G-t2p" firstAttribute="centerX" secondItem="502-Ir-ELC" secondAttribute="centerX" id="2zW-mH-dso"/>
+                            <constraint firstItem="IfR-02-kHw" firstAttribute="top" secondItem="aUI-1G-t2p" secondAttribute="bottom" constant="136.99999999999977" id="K4G-hC-ft6"/>
+                            <constraint firstItem="jgs-Sr-43j" firstAttribute="centerX" secondItem="502-Ir-ELC" secondAttribute="centerX" id="cDy-eQ-Uro"/>
+                            <constraint firstItem="aUI-1G-t2p" firstAttribute="top" secondItem="jgs-Sr-43j" secondAttribute="bottom" constant="34.000000000000057" id="r2F-NV-g9j"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q3h-pU-vEd" sceneMemberID="firstResponder"/>

@@ -17,7 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		D64486601ED20147003D2034 /* Different Colors.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Different Colors.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D64486601ED20147003D2034 /* Different One.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Different One.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D64486631ED20147003D2034 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D644866C1ED20147003D2034 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D644866E1ED20147003D2034 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -50,7 +50,7 @@
 		D64486611ED20147003D2034 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D64486601ED20147003D2034 /* Different Colors.app */,
+				D64486601ED20147003D2034 /* Different One.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -73,9 +73,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D644865F1ED20147003D2034 /* Different Colors */ = {
+		D644865F1ED20147003D2034 /* Different One */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D64486761ED20147003D2034 /* Build configuration list for PBXNativeTarget "Different Colors" */;
+			buildConfigurationList = D64486761ED20147003D2034 /* Build configuration list for PBXNativeTarget "Different One" */;
 			buildPhases = (
 				D644865C1ED20147003D2034 /* Sources */,
 				D644865D1ED20147003D2034 /* Frameworks */,
@@ -85,9 +85,9 @@
 			);
 			dependencies = (
 			);
-			name = "Different Colors";
+			name = "Different One";
 			productName = "Different Colors";
-			productReference = D64486601ED20147003D2034 /* Different Colors.app */;
+			productReference = D64486601ED20147003D2034 /* Different One.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -107,7 +107,7 @@
 					};
 				};
 			};
-			buildConfigurationList = D644865B1ED20147003D2034 /* Build configuration list for PBXProject "Different Colors" */;
+			buildConfigurationList = D644865B1ED20147003D2034 /* Build configuration list for PBXProject "Different One" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -120,7 +120,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D644865F1ED20147003D2034 /* Different Colors */,
+				D644865F1ED20147003D2034 /* Different One */,
 			);
 		};
 /* End PBXProject section */
@@ -292,7 +292,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D644865B1ED20147003D2034 /* Build configuration list for PBXProject "Different Colors" */ = {
+		D644865B1ED20147003D2034 /* Build configuration list for PBXProject "Different One" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D64486741ED20147003D2034 /* Debug */,
@@ -301,7 +301,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D64486761ED20147003D2034 /* Build configuration list for PBXNativeTarget "Different Colors" */ = {
+		D64486761ED20147003D2034 /* Build configuration list for PBXNativeTarget "Different One" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D64486771ED20147003D2034 /* Debug */,
